@@ -1,0 +1,23 @@
+#!/bin/bash
+# count limit ---counts the numbers from 1 to limit
+
+usage () {
+  echo "Usage:  $0 limit" 1>&2
+  echo "  where limit is at least 1" 1>&2
+  exit 1
+}
+
+if [ $# -ne 1 ]; then
+  usage
+fi
+
+if [ $1 -lt 1 ]; then
+  usage
+fi
+
+x=1
+while [ $x -le $1 ]; do
+  echo $x
+  x=$((x + 1))
+done
+

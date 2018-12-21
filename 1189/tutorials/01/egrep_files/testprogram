@@ -1,0 +1,20 @@
+#!/bin/bash -x
+
+#the first arg is the file name you want to look into
+#the second arg is the word you try to find occ
+
+if [ ${#} -ne 2]; then
+  echo "ERROR: ${0} need exactualy two args" 1>&2
+  exit 1
+fi
+
+x=0
+
+for word in `cat $1`;do  # $(cat $1) also make sense
+  if [$word = $2]; then
+      x=$(($x+1))
+  fi
+done 
+
+echo $x
+exit 0

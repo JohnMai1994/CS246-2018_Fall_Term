@@ -1,0 +1,1 @@
+cat /usr/share/dict/words|head -25|tail -16

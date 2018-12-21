@@ -1,0 +1,19 @@
+new 10
+init 
+3 3 5 3
+3 4 4 4 4 5
+-1 -1
+print
+step
+print
+step
+print
+step
+print
+step
+print
+step
+print
+step
+print
+step

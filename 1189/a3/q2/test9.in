@@ -1,0 +1,17 @@
+b g0 level0
+b g1 level1
+aa g0 0-0
+aa g0 0-1
+aa g0 0-2
+aa g0 0-3
+aa g0 0-4
+sg g1 level1
+rg g1 level1
+sg g0 level1
+rg g0 level1
+sa g1 1-1
+ra g1 1-1
+sa g0 1-1
+ra g0 1-1
+ag g0 g1
+p g0

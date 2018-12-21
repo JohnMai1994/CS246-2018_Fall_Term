@@ -1,0 +1,14 @@
+rc
+10909x
+dc
+pc i
+pc K
+pc (
+pc 3
++c 0101x
+dc
+pc *
+sc 2
+dc
+pc *
+q

@@ -1,0 +1,47 @@
+#!/bin/bash
+# Compiles all source files given on the command line
+# * verbose option (-v)
+# Skips files that do not exist
+
+usage () {
+  echo "Usage:  $0 [-v] files" 1>&2
+  exit 1
+}
+
+if [ $# -eq 0 ]; then
+  usage
+fi
+
+verbose=0
+if [ $1 = "-v" ]; then
+  verbose=1
+  shift
+fi
+
+while [ $# -gt 0 ]; do
+  if [ ! -e "$1" ] ; then
+    echo "Skipping $1"
+    shift
+    continue
+  fi
+  case "$1" in
+    *.c) if [ $verbose ]; then
+            echo "gcc $1"
+         fi
+         gcc "$1" ;;
+    *.C|*.cc) if [ $verbose ]; then
+                 echo "g++ $1"
+              fi
+              g++ "$1" ;;
+    *.scm|*.ss) if [ $verbose ]; then
+                   echo "mzscheme $1"
+                fi
+                mzscheme "$1" ;;
+    *.java) if [ $verbose ]; then
+               echo "javac $1"
+            fi
+            javac "$1" ;;
+    *) echo "${1}: unrecognized format"
+  esac
+  shift
+done

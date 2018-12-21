@@ -1,0 +1,7 @@
+new 10
+init
+3 3 5 5 7 7
+-1 -1 
+print
+step
+print

@@ -1,0 +1,15 @@
+rb 10012
+db
++b 002
+db
+sb 1
+pb ?
+
++b 11b
+db
+pb !
+sb 0
+db
+pb !
+q
+

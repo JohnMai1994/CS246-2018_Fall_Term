@@ -1,0 +1,61 @@
+b g0 level0
+b g1 level1-0
+b g2 level1-1
+b g3 level1-2
+b g4 level2-0
+b g5 level2-1
+b g6 level2-2
+b g7 level2-3
+b g8 level2-4
+b g9 level2-5
+aa g0 0-0
+aa g1 1-1
+aa g2 2-2
+aa g3 3-0
+aa g4 4-1
+aa g5 5-2
+aa g6 6-3
+aa g7 7-4
+aa g8 8-0
+aa g9 9-1
+aa g0 0-0
+aa g1 1-1
+aa g2 2-2
+aa g3 3-0
+aa g4 4-1
+aa g5 5-2
+aa g6 6-3
+aa g7 7-4
+aa g8 8-0
+aa g9 9-1
+p g0
+p g1
+p g2
+p g3
+p g4
+p g5
+p g6
+p g7
+p g8
+p g9
+ra g0 0-0
+ra g1 1-1
+ra g2 2-2
+ra g3 3-0
+ra g4 4-1
+ra g5 5-2
+ra g6 6-3
+ra g7 7-4
+ra g8 8-0
+ra g9 9-1
+p g0
+p g1
+p g2
+p g3
+p g4
+p g5
+p g6
+p g7
+p g8
+p g9
+

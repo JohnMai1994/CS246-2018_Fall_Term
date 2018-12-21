@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# the program runs program on each test in the test suite and reports on any
+#  tests whose output does not match the expected output
+
+
+if [ ${#} -ne 2 ]; then
+  echo "Usage: $0 require 2 args" 1>&2
+  exit 1
+fi
+
+if [ ! -x ${2} ];then
+  echo "$2 don't work"
+  exit 1
+fi 
+
+for input in $(cat ${1}); do
+  if [ -e ${input}.in ]; then
+    if [ -e ${input}.args ]; then    
+    	${2} $(cat ${input}.args) <${input}.in >${input}.out
+    else
+       ${2} <${input}.in >${input}.out
+    fi
+  else
+    if [ -e ${input}.args ]; then    
+       ${2} $(cat ${input}.args) >${input}.out
+    else
+       ${2} >${input}.out
+    fi
+  fi
+done 
+

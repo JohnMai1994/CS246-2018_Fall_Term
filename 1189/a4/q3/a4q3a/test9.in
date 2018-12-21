@@ -1,0 +1,16 @@
+new 20
+init
+6 6 9 6
+5 7 5 8 5 9 6 9 7 9 8 9 9 8
+-1 -1 
+print
+step
+print
+step
+print
+step
+print
+step
+print
+steps 3
+print

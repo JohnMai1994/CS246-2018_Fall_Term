@@ -1,0 +1,10 @@
+#!/bin/bash
+
+total=0
+
+for f in "${@}" ; do
+  this=`wc -w < $f`
+  total=$((total + this))
+done
+
+echo $total

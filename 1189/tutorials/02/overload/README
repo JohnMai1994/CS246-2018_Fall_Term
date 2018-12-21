@@ -1,0 +1,13 @@
+HOW TO ATTEMPT TO COMPILE THIS PROGRAM:
+
+You can attempt a compile to see whether an option for a foo overload will work.
+However, you must follow the below instructions to include the definition of
+an overloaded version.
+
+Below each option, there is a line like: #ifdef X, where X is A,B,C,or D.
+When compiling, you should use the following command:
+(assuming the aliases are set)
+
+g++14 -DX overload.cc
+
+With the X replaced with A,B,C,or D as appropriate.

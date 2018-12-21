@@ -1,0 +1,20 @@
+#!/bin/bash
+# Returns the date of the next payday (last Friday of the month)
+# Examples:
+# payday (no arguments) -- gives this month's payday
+# payday October 2012 -- gives payday in October 2012
+
+answer () {
+  if [ $2 ]; then
+     preamble=${2}
+  else
+     preamble="This month"
+  fi
+  if [ $1 -eq 31 ]; then
+    echo "${preamble}'s payday is on the ${1}st."
+  else
+    echo "${preamble}'s payday is on the ${1}th."
+  fi
+}
+
+answer `cal $1 $2 | awk '{print $6}' | grep "[0-9]" | tail -1` $1

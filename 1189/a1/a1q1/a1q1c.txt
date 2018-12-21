@@ -1,0 +1,1 @@
+egrep -v "cs246" myfile.txt|wc -l

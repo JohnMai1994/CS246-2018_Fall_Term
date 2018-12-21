@@ -1,0 +1,19 @@
+#!/bin/bash
+
+n=1
+opt="-w"
+total=0
+
+if [ $1 == "-l" ]; then
+  opt="-l"
+  n=2
+fi
+
+while [ $n -le $# ]; do
+  file=${!n}
+  this=`wc $opt < $file`
+  total=$((total + this))
+  n=$((n + 1))
+done
+
+echo $total

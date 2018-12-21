@@ -1,0 +1,15 @@
+#!/bin/bash
+
+sum=0
+count=0
+
+for number in $(cat ${1}); do
+	sum=$((sum + number)) # when doing arithemetic inside (()), $ is
+	count=$((count + 1)) # not needed to indicate that its a variable
+
+	# alternatively,
+	#((sum+=number))
+	#((++count))
+done
+
+echo $((sum / count))

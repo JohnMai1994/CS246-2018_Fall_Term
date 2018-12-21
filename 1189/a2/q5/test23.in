@@ -1,0 +1,34 @@
+ra
+1x
+rb
+1x
+rc
+1x
+rd
+1x
+
++a
+001x
++b
+001B
++c
+001#
++d
+0013
+
+pa *
+pb *
+pc *
+pd *
+
+da
+db
+dc
+dd
+
+sa 0
+sb 2
+sc 7
+sd 10
+
+q

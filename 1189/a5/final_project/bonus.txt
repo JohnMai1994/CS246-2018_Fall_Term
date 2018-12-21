@@ -1,0 +1,15 @@
+Command-line Interface
+
+-sound: Add the welcome music at the Cover page and extra music effect while the block is moving or being cleared. 
+
+-specialOn: Add extra level 5 in the board, which provide two new blocks, block C and block cross, for player to increase the game's difficulty.
+
+-easy: simplify the command line and control the block through "A" for left, "S" for down, "D" for right, "Q" for counterclockwise, "E" for clockwise and "SS" for drop.   
+
+Special Action
+
+  reverse: Additional punishment. when player choice this punishment, the direction control of another player will be reversed until the gameover.
+ 
+Complete the entire project, without leaks, and without explicitly managing own memory. In our project, we handle all memory management through vectors and smart pointers. 
+
+

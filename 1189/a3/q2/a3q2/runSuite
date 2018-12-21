@@ -1,0 +1,100 @@
+#!/bin/bash 
+
+# the program runs program on each test in the test suite and reports on any
+#  tests whose output does not match the expected output
+
+
+if [ ${#} -ne 2 ]; then
+  echo "Usage: $0 require 2 args" 1>&2
+  exit 1
+fi
+
+if [ ! -x ${2} ];then
+  echo "$2 don't work" 1>&2
+  exit 1
+fi 
+
+for input in $(cat ${1}); do
+    tem=$(mktemp /tmp/${input}.XXX)
+    if [ ! -e ${input}.out ]; then
+       echo "${input}.out do not exist" 1>&2
+       exit 1
+    fi
+    if [ ! -r ${input}.out ]; then
+       echo "${input}.out can not readable" 1>&2
+       exit 3
+    fi
+
+  if [ -e ${input}.in ]; then
+   if [ -e ${input}.args ]; then
+      $2 $(cat ${input}.args) < ${input}.in >${tem}
+    else
+      $2 < ${input}.in > ${tem}
+    fi
+
+    if ! diff ${tem} ${input}.out >/dev/null; then
+      echo "Test failed: ${input}"
+      echo "Args:"
+      if [ -e ${input}.args ]; then
+        echo "$(cat ${input}.args)"
+      fi
+      echo "Input:"
+      echo "$(cat ${input}.in)"
+      echo "Expected:"
+      echo "$(cat ${input}.out)"
+      echo "Actual:"
+      echo "$(cat ${tem})"
+    fi
+
+  else
+    if [ -e ${input}.args ]; then
+      $2 $(cat ${input}.args) >${tem}
+    else
+      $2 > ${tem}
+    fi
+    
+    if ! diff ${tem} ${input}.out >/dev/null; then
+      echo "Test failed: ${input}"
+      echo "Args:"
+      if [ -e ${input}.args ]; then
+         echo "$(cat ${input}.args)"
+      fi
+      echo "Input:"
+      echo "Expected:"
+      echo "$(cat ${input}.out)"
+      echo "Actual:"
+      echo "$(cat ${tem})"
+    fi
+  fi
+    rm ${tem}
+done
+
+
+
+   # if [ -e ${input}.args ]; then  
+    #  ${2} $(cat ${input}.args) >${tem}
+     # diff ${tem} ${input}.out >/dev/null
+     # if [ $? -ne 0 ]; then
+   #   echo "Test failed: ${input}"
+    #  echo "Args:"
+     # echo "$(cat ${input}.args)"
+   #   echo "Expected:"
+    #  echo "$(cat ${input}.out)"
+     # echo "Actual:"
+  #    echo "$(cat ${tem})"
+   #   fi
+  #  else
+   #    ${2} >${tem}
+    #   diff ${tem} ${input}.out >/dev/null
+     #  if [ $? -ne 0 ]; then
+      # echo "Test failed: ${input}"
+  #     echo "Args:"
+   #    echo "$(cat ${input}.args)"
+    #   echo "Expected:"
+     #  echo "$(cat ${input}.out)"
+      # echo "Actual:"
+      # echo "$(cat ${tem})"
+      # fi
+   # fi
+    
+

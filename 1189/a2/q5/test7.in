@@ -1,0 +1,15 @@
+rd 10012
+dd
++d 002
+dd
+sd 1
+pd?
+
++d 11b
+dd
+pd !
+sd 0
+dd
+pd !
+q
+

@@ -1,0 +1,6 @@
+#!/bin/bash
+# Renames all .C files to .cc
+
+for name in *.C; do
+  mv ${name} ${name%C}cc
+done

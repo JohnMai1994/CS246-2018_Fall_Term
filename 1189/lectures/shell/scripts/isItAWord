@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [$? -eq 0]; then
+echo Bad Password
+else
+echo Maybe Good Password
+fi
+
+egrep "^$1$" /usr/share/dict/words

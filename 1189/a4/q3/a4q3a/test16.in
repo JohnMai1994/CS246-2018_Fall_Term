@@ -1,0 +1,17 @@
+new 20
+init
+10 10 10 11 10 12 10 13 10 14
+13 10 13 11 13 12 13 13 13 14
+-1 -1
+print
+step
+print
+step
+print
+step
+print
+step
+print
+steps 5
+print
+

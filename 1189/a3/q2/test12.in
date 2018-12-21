@@ -1,0 +1,21 @@
+b g0 0
+b g1 1
+b g2 2
+b g3 0
+b g4 1
+b g5 2
+b g6 0
+b g7 1
+b g8 2
+b g9 3
+p g0
+p g1
+p g2
+p g3
+p g4
+p g5
+p g6
+p g7
+p g8
+p g9
+

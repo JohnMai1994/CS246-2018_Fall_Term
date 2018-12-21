@@ -1,0 +1,14 @@
+new 30
+init
+10 10 10 11 10 12 10 13 10 14
+-1 -1
+print
+step
+print
+step
+step
+step
+print
+steps 5
+print
+

@@ -1,0 +1,17 @@
+new 10
+init 
+2 0
+2 1
+2 2
+2 3  
+3 0
+3 4
+4 0
+5 1
+5 4
+-1 -1
+print
+steps 5
+print
+steps 2
+print

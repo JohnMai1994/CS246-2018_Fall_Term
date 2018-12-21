@@ -1,0 +1,39 @@
+ra
+x
+pa *
+da
+sa 3
+pa *
+da
++a 100x
+pa *
+
+rb
+3
+pb *
+db
+sb 3
+pb *
+db
++b 1003
+pb *
+
+rc
+T
+pc *
+dc
+sc 3
+pc *
+dc
++c 100T
+pc*
+
+rd
+*
+pd *
+dd
+sd 3
+pd *
+dd
++d 100*
+pd*

@@ -1,0 +1,17 @@
+#!/bin/bash
+# Computes factorials
+# Works for arguments 5 or less, because it manipulates exit codes, which
+# cannot be larger than 255.
+
+
+fact () {
+  if [ $1 -eq 0 ]; then
+    return 1
+  fi
+  fact $(($1 - 1))
+  return $(($1 * $?))
+}
+
+read line
+fact $line
+echo $?

@@ -1,0 +1,15 @@
+b g0 level0
+aa g0 0-0
+aa g0 0-1
+aa g0 0-2
+p g0
+sa g0 0-0
+sa g0 0-3
+ra g0 0-0
+sa g0 0-0
+sa g0 0-1 
+ra g0 0-1
+p g0
+ra g0 0-2
+p g0
+rg g0 level0

@@ -1,0 +1,12 @@
+#!/bin/bash
+# Compiles all C, C++, Scheme, and Java files in the current directory
+
+for name in * ; do
+  case "$name" in
+    *.c) gcc "$name" ;;
+    *.C|*.cc) g++ "$name" ;;
+    *.scm|*.ss) mzscheme "$name" ;;
+    *.java) javac "$name" ;;
+    *) echo "${name}: unrecognized format"
+  esac
+done

@@ -1,0 +1,27 @@
+ra
+111000x
+rb
+010101x
+rc
+000111x
+rd
+101010x
+da
+db
+dc
+dd
+pa !
++a 111x
+pa !
+sa 2
+pa !
+pb *
++b 101x
+pb *
+sc 3
+pc !
+da
+db
+dc
+dd
+q

@@ -1,0 +1,1 @@
+egrep -i "linux\.student\.cs\.uwaterloo\.ca" myfile.txt | wc -l

@@ -1,0 +1,18 @@
+#! /bin/bash
+# Returns the date of the next payday
+# .....
+
+report () {
+  if [ $2 ]; then
+     echo -n ${2}
+  else 
+     echo -n "This month"
+  fi
+  if [ $1 -eq 31 ]; then
+     echo "'s payday is on the 31st."
+  else
+     echo "'s payday is on the ${1}th."
+  fi
+}
+
+report $(cal $1 $2 | awk '{print $6}' | grep "[0-9]" | tail -1) $1
